@@ -4,25 +4,10 @@ def get_second(x):
 def sort_list(freq):
     return sorted(freq, key=get_second)
 
-def huffman_decode(text, table):
-    res = ""
-    while text:
-        for (k,val) in table.items():
-            if text.startswith(val):
-                res += k
-                text = text[len(val):]
-    return res
-
-def huffman_encode(text, table):
-    res = ""
-    for char in text:
-        res += table[char]
-    return res
-
 print("Podaj sciezke: (np. 'tadek.txt')\n")
 path = input()
 
-with open(path, "r", encoding="utf-8") as file:
+with open(path, "r", encoding="utf-8-sig") as file:
     line = file.read()
 
 frequency = list()
@@ -64,17 +49,10 @@ huffman_bytes = huffman_bits/8
 print(len(line.encode()))
 print(huffman_bytes)
 
-x = input()
-
-if x == "decode":
-    with open("converted_file.txt", "r", encoding="utf-8") as file:
-        line = file.read()
-    converted_text = huffman_decode(line, huffman_encoding)
-    with open("decoded_file.txt", "w", encoding="utf-8") as file:
-        file.write(converted_text)
-elif x == "encode":
-    converted_text = huffman_encode(line, huffman_encoding)
-    with open("converted_file.txt", "w", encoding="utf-8") as file:
-        file.write(converted_text)
-else:
-    None
+with open("frequency", "w", encoding="utf-8-sig") as file:
+    for (k, val) in huffman_encoding.items():
+        if k != "\n":
+            file.write(k + " " + val + "\n")
+        else:
+            string = "\\" + "n " + val + "\n"
+            file.write(string)
