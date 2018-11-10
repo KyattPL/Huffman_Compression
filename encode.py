@@ -4,6 +4,12 @@ def huffman_encode(text, table):
         res += table[char]
     return res
 
+def to_bytes(data):
+  b = bytearray()
+  for i in range(0, len(data), 8):
+    b.append(int(data[i:i+8], 2))
+  return bytes(b)
+
 print("Podaj sciezke pliku do zakodowania:\n")
 path = input()
 
@@ -27,4 +33,4 @@ for freq in freq_table:
 
 converted_text = huffman_encode(line, huffman_encoding)
 with open("converted_file.txt", "w", encoding="utf-8-sig") as file:
-        file.write(converted_text)
+        file.write(to_bytes(converted_text))
