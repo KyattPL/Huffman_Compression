@@ -16,3 +16,4 @@ Of course, you can use the generated frequency table to encode/decode any file (
 Todo plans:
 1. Make a single .py file to run whole Huffman Coding.
 2. Optimize decoding algorithm (I have an idea, don't worry).
+3. Make an actual compression (option to create a lower-sized file). Found an answer on stackoverflow about that, tested it and it appears to be working, however I have no idea right now how to read that converted file and convert it back to the original one.
