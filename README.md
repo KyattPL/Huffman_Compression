@@ -10,4 +10,9 @@ Usage:
 Note:
 Of course, you can use the generated frequency table to encode/decode any file (Compression ratio may and even certainly will differ). If your file contains any characters that don't appear in the frequency table, the program will fail.
 
-"tadek.txt" and "idiota.txt" are polish poems, you can use them to test how the whole program is working!
+"tadek.txt" and "idiota.txt" are polish poems, you can use them to test how the whole program works!
+
+
+Todo plans:
+1. Make a single .py file to run whole Huffman Coding.
+2. Optimize decoding algorithm (I have an idea, don't worry).
