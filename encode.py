@@ -32,5 +32,15 @@ for freq in freq_table:
         huffman_encoding[krotka[0]] = krotka[1]
 
 converted_text = huffman_encode(line, huffman_encoding)
-with open("converted_file.txt", "w", encoding="utf-8-sig") as file:
+
+print("Would you like to encode to:")
+print("1. Text (no real compression)")
+print("2. Binary (real compression)")
+x = input()
+
+if x == "1":
+    with open("converted_file.txt", "w", encoding="utf-8-sig") as file:
+        file.write(converted_text)
+elif x == "2":
+    with open("converted_file_bin.bin", "wb") as file:
         file.write(to_bytes(converted_text))
