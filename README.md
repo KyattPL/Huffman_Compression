@@ -4,7 +4,7 @@ This is a simple program that compresses your text file using the Huffman Compre
 
 Usage:
 1. Firstly, run "python frequency.py" and then type the relative or absoulte path of your file (for which you'd like to make a frequency table of occurance for each possible value of the source symbol). This will automatically generate the "frequency" file (no extension!)
-2. Next, run "python encode.py" and provide it with the relative or absolute path of your file (which you'd like to encode using the frequency table located in the "frequency" file).
+2. Next, run "python encode.py" and provide it with the relative or absolute path of your file (which you'd like to encode using the frequency table located in the "frequency" file). There you can choose to either make .txt file (without real compression) or .bin file which will be compressed (but not easy to read).
 3. Lastly, run "python decode.py" and provide it with the relative or the absolute path of your file (which you'd like to decode using the frequency table located in the "frequency" file).
 
 Note:
@@ -16,4 +16,4 @@ Of course, you can use the generated frequency table to encode/decode any file (
 Todo plans:
 1. Make a single .py file to run whole Huffman Coding.
 2. Optimize decoding algorithm (I have an idea, don't worry).
-3. Make an actual compression (option to create a lower-sized file). Found an answer on stackoverflow about that, tested it and it appears to be working, however I have no idea right now how to read that converted file and convert it back to the original one.
+3. I have no idea right now how to read that converted file and convert it back to the original one.

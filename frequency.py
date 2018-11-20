@@ -4,7 +4,7 @@ def get_second(x):
 def sort_list(freq):
     return sorted(freq, key=get_second)
 
-print("Podaj sciezke: (np. 'tadek.txt')\n")
+print("Podaj sciezke: (np. 'tadek.txt')")
 path = input()
 
 with open(path, "r", encoding="utf-8-sig") as file:
