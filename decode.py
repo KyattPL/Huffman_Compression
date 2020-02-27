@@ -31,3 +31,5 @@ for freq in freq_table:
 converted_text = huffman_decode(line, huffman_encoding)
 with open("decoded_file.txt", "w", encoding="utf-8-sig") as file:
     file.write(converted_text)
+
+#siemandero elo bencka
